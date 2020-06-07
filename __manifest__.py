@@ -10,6 +10,7 @@
     'auto_install': False,
     'demo': [],
     'data': [
+		'security/ir.model.access.csv',
 		'views/task_schedular_views.xml'
 		
 	],
