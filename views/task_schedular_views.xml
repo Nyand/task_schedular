@@ -12,5 +12,34 @@
 				   parent="task_schedular_root_menu"
 				   action="action_task_schedular"
 				   sequence="1"/>
+				   
+		<!-- views start -->
+        <!-- task form view -->
+        <record id="task_view_FORM" model="ir.ui.view">
+            <field name="name">Task Form</field>
+            <field name="model">task.schedular</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+					<sheet>
+					<div class="oe_title">
+						<h1>
+							<field name="name" placeholder="Task title"/>
+						</h1>
+					</div>
+					<group>
+						<group>
+						 <field name="user_id"/>
+						 <field name="description"/>
+						</group>
+						<group>
+						 <field name="start_date"/>
+						 <field name="expiry_date"/>
+						</group>
+					</group>
+					
+					</sheet>
+				</form>
+			</field>
+		</record>
 	</data>
 </odoo>
