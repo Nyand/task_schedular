@@ -10,6 +10,7 @@
     'auto_install': False,
     'demo': [],
     'data': [
+		'views/task_schedular_views.xml'
 		
 	],
     'installable': True,

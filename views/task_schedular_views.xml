@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.actions.act_window" id="action_task_schedular">
+			<field name="name">Task Schedular</field>
+			<field name="res_model">task.schedular</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	
+		<menuitem name="Task Schedular" id="task_schedular_root_menu"/>
+		<menuitem name="Tasks" id="task_schedular_menu"
+				   parent="task_schedular_root_menu"
+				   action="action_task_schedular"
+				   sequence="1"/>
+	</data>
+</odoo>
