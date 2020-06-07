@@ -10,7 +10,7 @@ class TaskSchedular(models.Model):
     user_id = fields.Many2one(
         'res.users', string='Responsible', index=True, required=True,
          default=lambda self: self.env.user)
-    description=fields.Text('Task descrition')
+    description=fields.Text('Task description')
     start_date = fields.Date('Start Date', index=True)
     expiry_date = fields.Date('Expiry Date', index=True)
 	
