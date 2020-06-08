@@ -19,19 +19,22 @@
             <field name="name">Task Form</field>
             <field name="model">task.schedular</field>
             <field name="arch" type="xml">
-                <form string="Student">
+                <form string="Task">
+					<header>
+						<field name="state" widget="statusbar" options="{'clickable':'1'}"/>
+					</header>
 					<sheet>
 					<div class="oe_title">
 						<h1>
 							<field name="name" placeholder="Task title"/>
 						</h1>
 					</div>
-					<group>
-						<group>
+					<group col="4">
+						<group colspan="2">
 						 <field name="user_id"/>
 						 <field name="description"/>
 						</group>
-						<group>
+						<group colspan="2">
 						 <field name="start_date"/>
 						 <field name="expiry_date"/>
 						</group>

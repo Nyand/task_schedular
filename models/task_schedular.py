@@ -13,4 +13,14 @@ class TaskSchedular(models.Model):
     description=fields.Text('Task description')
     start_date = fields.Date('Start Date', index=True)
     expiry_date = fields.Date('Expiry Date', index=True)
-	
+    state=fields.Selection([("new", "New"),
+	    ("in_progress", "In Progress"),
+	    ("completed", "Completed"),
+	    ("expired", "Expired")],
+	    default='new')
+    last_modification = fields.Datetime(readonly=True)
+		
+		
+    def write(self, values):
+	    values['last_modification']=fields.Datetime.now()
+	    return super(TaskSchedular, self).write(values)
