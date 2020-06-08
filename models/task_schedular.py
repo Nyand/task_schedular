@@ -17,8 +17,13 @@ class TaskSchedular(models.Model):
 	    ("in_progress", "In Progress"),
 	    ("completed", "Completed"),
 	    ("expired", "Expired")],
-	    default='new')
+	    default='new', index=True, group_expand="_expand_states")
     last_modification = fields.Datetime(readonly=True)
+	
+	
+    def _expand_states(self, states, domain, order):
+        return [key for key, val in type(self).state.selection]
+
 		
 		
     def write(self, values):
