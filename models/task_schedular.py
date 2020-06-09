@@ -2,6 +2,8 @@
 
 from odoo import fields, models
 
+from odoo.exceptions import UserError
+
 class TaskSchedular(models.Model):
     _name='task.schedular'
     _description='Task Schedular'
@@ -29,3 +31,10 @@ class TaskSchedular(models.Model):
     def write(self, values):
 	    values['last_modification']=fields.Datetime.now()
 	    return super(TaskSchedular, self).write(values)
+    
+
+    def unlink(self):
+	    for task in self:
+		    if task.state =='completed':
+			    raise UserError("You can not delete completed tasks")
+        
