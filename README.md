@@ -1,6 +1,6 @@
 # task_schedular
 Odoo 12.00 task scheduling app
-This app enables on to carry out the folloowing functionalities:
+This app enables one to carry out the folloowing functionalities:
 a) Create a task.
 b) Give a task title
 c) Give a description of the task.
