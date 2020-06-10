@@ -7,6 +7,7 @@ from odoo.exceptions import UserError
 class TaskSchedular(models.Model):
     _name='task.schedular'
     _description='Task Schedular'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 	
     name=fields.Char('Task name')
     user_id = fields.Many2one(

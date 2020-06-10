@@ -2,7 +2,7 @@
 {
     'name': 'Task Schedular',
     'author': 'Robert Mauti',
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
     'version': '1.0',
     'description': """
 	a task scheduling app
