@@ -30,7 +30,7 @@
 							<field name="name" placeholder="Task title"/>
 						</h1>
 					</div>
-					<group col="4">
+					<group col="6">
 						<group colspan="2">
 						 <field name="user_id"/>
 						 <field name="description"/>
@@ -38,6 +38,9 @@
 						<group colspan="2">
 						 <field name="start_date"/>
 						 <field name="expiry_date"/>
+						</group>
+						<group>
+						 <field name="last_modification"/>
 						</group>
 					</group>
 					
